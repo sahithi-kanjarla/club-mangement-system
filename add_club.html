@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/add_club.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Club</title>
+  
+</head>
+<body>
+    <h1>Add Club</h1>
+    {% if current_user.is_authenticated %}
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('add_club') }}">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"  required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"  required><br><br>
+        <label for="name">Club Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" required></textarea><br><br>
+        <label for="logo">Logo:</label><br>
+        <input type="file" id="logo" name="logo" accept="image/*"><br><br>
+        <input type="submit" value="Add Club">
+    </form>
+    {% else %}
+    <p>You must be logged in to add a club.</p>
+    <form method="POST" action="{{ url_for('login') }}">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+    {% endif %}
+</body>
+</html>
+
+

@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* Style for the login form container */
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form inputs */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for submit button */
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for error messages */
+.login-container .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Styles for the events page */
+
+/* CSS for setting a fixed size for the event */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*index page */
+
+/* styles.css */
+
+/* Style for the header */
+.index header {
+    background-color: #007bff; /* Change the background color as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+/* Style for the navigation */
+.index nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the logo */
+.index nav img {
+    margin-right: 10px; /* Add space between the logo and navigation links */
+}
+
+/* Style for the navigation links */
+.index nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.index nav ul li {
+    display: inline;
+    margin-right: 20px; /* Add space between the navigation links */
+}
+
+.index nav ul li a {
+    color: #fff; /* Change the color of the navigation links */
+    text-decoration: none;
+}
+
+.index nav ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+.event {
+    width: 48%; /* Set width to occupy 48% of the container */
+    margin-bottom: 20px;
+}
+
+.event img {
+    width: 100%; /* Set the width to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px;
+}
+
+/* Style for event title */
+.event h2 {
+    margin-bottom: 5px;
+}
+
+/* Style for event description */
+.event p {
+    margin-bottom: 10px;
+}
+
+/* Style for event date */
+.event-date {
+    font-style: italic;
+    color: #888;
+}
+
+/* Style for event location */
+.event-location {
+    font-weight: bold;
+    color: #555;
+}
+
+
+
+
+
+

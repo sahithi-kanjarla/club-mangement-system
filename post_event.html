@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="static/post_event.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Event</title>
+ 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('events') }}">Events</a></li>
+                <li><a href="{{ url_for('clubs') }}">Clubs</a></li>
+                <li><a href="{{ url_for('post_event') }}">Post Event</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="post-event-container">
+            <h1>Post Event</h1>
+            <form action="{{ url_for('post_event') }}" method="post" enctype="multipart/form-data">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="event_title">Event Title:</label>
+                <input type="text" id="event_title" name="event_title" required>
+            
+                <label for="event_description">Event Description:</label>
+                <textarea id="event_description" name="event_description" required></textarea>
+            
+                <label for="event_file">Event File:</label>
+                <input type="file" id="event_file" name="event_file" accept=".pdf, .doc, .docx">
+            
+                <button type="submit">Post Event</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+
+

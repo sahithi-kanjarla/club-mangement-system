@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/clubs.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs</title>
+
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('events') }}">Events</a></li>
+                <li><a href="{{ url_for('clubs') }}">Clubs</a></li>
+                <li><a href="{{ url_for('post_event') }}">Post Event</a></li>
+                <li><a href="{{ url_for('add_club') }}">Add Club</a></li>
+                <li><a href="{{ url_for('delete_club') }}">Delete Club</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Clubs</h1>
+        <div class="clubs-container">
+            {% for club in clubs %}
+            <div class="club">
+                <img src="data:image/png;base64,{{ club.logo_data }}" alt="{{ club.name }} Logo">
+                <div>
+                    <h2><a href="{{ url_for('club_detail', club_id=club.id) }}">{{ club.name }}</a></h2>
+                    <p>{{ club.description }}</p>
+                </div>
+               
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

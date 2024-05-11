@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/events.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Events</title>
+    
+    
+</head>
+<body>
+    <header>
+        <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('events') }}">Events</a></li>
+                <li><a href="{{ url_for('clubs') }}">Clubs</a></li>
+                <li><a href="{{ url_for('post_event') }}">Post Event</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <h1>All Events</h1>
+        <ul>
+            {% for event in events %}
+                <li>
+                    <h2>{{ event.title }}</h2>
+                    <p>Description: {{ event.description }}</p>
+                    {% if event.file_data %}
+                        <p><a href="{{ url_for('download_file', event_id=event.id) }}">Download File</a></p>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
+
+
+
