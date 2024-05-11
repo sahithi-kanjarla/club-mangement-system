@@ -1,4 +1,15 @@
 This is a web-based club management system designed to streamline event management and club administration. Users can sign up, log in, view events, and can view clubs details. authorized people can add, delte, edit clubs, and post events.
+
+File Structure
+main.py: Contains the main Flask application logic, routing, and database interactions.
+templates/: Directory containing HTML templates for different pages.
+static/: Directory for static files like CSS, JavaScript, and images.
+
+Technologies Used
+Backend: Python Flask for server-side logic and routing.
+Frontend: HTML, CSS for user interfaces.
+Database: MySQL via XAMPP for data storage and management.
+
 Getting Started
 
 Sign Up/Login:
